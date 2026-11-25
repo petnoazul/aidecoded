@@ -106,4 +106,32 @@
   html[data-lang="pt"] [data-en-only]{display:none}
   :focus-visible{outline:2px solid var(--signal);outline-offset:3px;border-radius:6px}
   .btn:focus-visible,.card:focus-visible{border-radius:14px}
-  @media (min-width:720px){.wrap{padding-top:56px}}
+  @media (min-width:720px) and (max-width:959px){.wrap{padding-top:56px}}
+
+  /* ---------- desktop / tablet ---------- */
+  @media (min-width:960px){
+    .wrap{max-width:1160px;padding:40px 48px 56px}
+    header{margin-bottom:72px}
+    .hero{display:grid;grid-template-columns:1.5fr 1fr;gap:64px;align-items:end}
+    h1{font-size:clamp(88px,8vw,120px);white-space:nowrap}
+    .lead,.lead + .lead{font-size:20px;margin-top:0}
+    .btns{margin:0 0 6px}
+    .btn{padding:22px 24px;font-size:18px}
+    section{margin-top:104px}
+    h2{font-size:clamp(36px,3.6vw,48px)}
+    .sub{font-size:16px}
+    .grid{grid-template-columns:1fr 1fr;gap:20px}
+    .steps{grid-template-columns:repeat(3,1fr);gap:20px}
+    .step{grid-template-columns:1fr;padding:26px}
+    .about{display:grid;grid-template-columns:1.4fr 1fr;gap:12px 48px;padding:32px;font-size:18px}
+    .about p + p{margin-top:0}
+    .about .pills{grid-column:1 / -1}
+    #faq{display:grid;grid-template-columns:1fr 1.4fr;column-gap:64px;align-content:start}
+    #faq > .label,#faq > h2,#faq > .sub{grid-column:1}
+    #faq .faq{grid-column:2;grid-row:1 / span 3;margin-top:0}
+    .faq summary{font-size:18px;padding:20px 2px}
+    .cta{display:flex;align-items:flex-end;justify-content:space-between;gap:40px;padding:56px}
+    .cta h2{font-size:clamp(44px,4.6vw,64px);margin:0}
+    .cta .btn{flex:none}
+    footer{margin-top:80px}
+  }
